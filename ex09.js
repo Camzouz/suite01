@@ -22,3 +22,22 @@ boostedEvenAddition([4, 5, 6]);
 boostedEvenAddition([1, 3, 4, 5, 4, 6, 9, 8, 11, 10, 11, 12]);
 
 //  écrire votre code sous ce commentaire
+function boostedEvenAddition(table){
+    var somme = 0;
+    for (i = 0; i<table.length; i++)
+    if (isEven(table[i]) == 1){
+        somme = somme+table[i];
+    }
+        return somme;
+}
+
+function isEven(nb) {
+    if (nb % 2 == 0){
+        return 1;
+    }
+    else{
+        return 0;
+    }
+}
+console.log(boostedEvenAddition([4, 5, 6]));
+console.log(boostedEvenAddition([1, 3, 4, 5, 4, 6, 9, 8, 11, 10, 11, 12]));
